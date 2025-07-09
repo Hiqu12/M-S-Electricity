@@ -168,6 +168,7 @@
             font-weight: 600;
             color: rgb(46, 45, 45);
             border-bottom: 0.5px solid rgba(207, 207, 207, 0.87);
+            width: 245px;
             display: block;
         }
 
@@ -916,9 +917,9 @@ Additional Details: ${details}
         `.trim();
 
             // Encode message for URL
-            const encodedMessage = encodeURIComponent(message);
-            const phoneNumber = '447854938550'; // Business WhatsApp number (without +)
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            // const encodedMessage = encodeURIComponent(message);
+            // const phoneNumber = '447854938550'; // Business WhatsApp number (without +)
+            // const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
             // Open WhatsApp with pre-filled message
             window.open(whatsappUrl, '_blank');
