@@ -152,6 +152,7 @@
                 font-weight: 600;
                 color: rgb(46, 45, 45);
                 border-bottom: 0.5px solid rgba(207, 207, 207, 0.87);
+                width: 245px;
                 display: block;
             }
 
@@ -235,75 +236,63 @@
             color: #4a5568;
         }
 
-        .team-section {
-            margin: 4rem 0;
-        }
-
-        .team-section h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #2d3748;
-            margin-bottom: 2rem;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .team-member {
-            text-align: center;
-        }
-
-        .team-member img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            border: 3px solid #68d391;
-        }
-
-        .team-member h4 {
-            color: #2d3748;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-member p {
-            color: #4a5568;
-            font-size: 0.9rem;
-        }
-
+        
         .values-section {
-            background: rgba(24, 73, 236, 0.534);
-            padding: 3rem;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+  background: white;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  color: black;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 
-        .values-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
+.values-section h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #071452da;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
 
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
 
-        .value-item {
-            padding: 1rem;
-        }
+.value-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
 
-        .value-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
+.value-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.value-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffdd57;
+}
+
+.value-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.value-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+}
+
 
         /* Footer */
         .footer {
@@ -425,28 +414,6 @@
             }
         }
 
-        .whatsapp-button {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #25D366;
-            border-radius: 50%;
-            padding: 15px;
-            z-index: 9999;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-button:hover {
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .whatsapp-button img {
-            width: 28px;
-            height: 28px;
-            display: block;
-        }
 
         .scroll-to-top {
             position: fixed;
@@ -487,6 +454,49 @@
                 box-shadow: 0 0 0 0 rgba(0, 194, 146, 0);
             }
         }
+                .social-button {
+            position: fixed;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, background 0.3s;
+            text-decoration: none;
+        }
+
+        /* Position each one slightly offset vertically */
+        .facebook {
+            top: 55%;
+            background-color: #1877f2;
+        }
+
+        .instagram {
+            top: 65%;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .tiktok {
+            top: 75%;
+            background-color: #000000;
+        }
+
+        .whatsapp {
+            top: 45%;
+            background-color: #25d366;
+        }
+
+        /* Hover effect */
+        .social-button:hover {
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 
@@ -494,7 +504,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <img src="logo3.png" alt="logo" class="logo">
+            <a href="index.html"><img src="logo3.png" alt="logo" class="logo"></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -542,47 +552,204 @@
         </div>
 
         <div class="team-section" data-aos="zoom-in">
-            <h2>Meet Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="team1.jpg" alt="John Smith">
-                    <h4>John Smith</h4>
-                    <p>Lead Electrician with 15 years of experience in commercial and residential installations.</p>
-                </div>
-                <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="team2.jpg" alt="Emma Wilson">
-                    <h4>Emma Wilson</h4>
-                    <p>Project Manager specializing in large-scale electrical projects and safety compliance.</p>
-                </div>
-                <div class="team-member" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="team3.jpg" alt="Michael Brown">
-                    <h4>Michael Brown</h4>
-                    <p>Senior Technician with expertise in advanced lighting solutions and smart home systems.</p>
-                </div>
-            </div>
-        </div>
+  <h2>Meet Our Team</h2>
 
-        <div class="values-section" data-aos="zoom-in">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-item">
-                    <h3>Safety First</h3>
-                    <p>We prioritize safety in every project, adhering to strict regulations and best practices.</p>
-                </div>
-                <div class="value-item">
-                    <h3>Quality Craftsmanship</h3>
-                    <p>Every job is completed with precision and attention to detail, ensuring lasting results.</p>
-                </div>
-                <div class="value-item">
-                    <h3>Customer Satisfaction</h3>
-                    <p>We strive to exceed expectations with exceptional service and clear communication.</p>
-                </div>
-                <div class="value-item">
-                    <h3>Innovation</h3>
-                    <p>We embrace the latest technologies to provide efficient and modern electrical solutions.</p>
-                </div>
-            </div>
-        </div>
+  <div class="team-hierarchy">
+
+    <!-- Managing Director -->
+    <div class="team-role" data-aos="zoom-in" data-aos-delay="100">
+      <img src="waseem qureshi.jpg" alt="Muhammad Waseem Qureshi">
+      <h4>Muhammad Waseem Qureshi</h4>
+      <span class="position">Managing Director</span>
+      <p>With over 20 years of leadership in commercial and residential electrical projects.</p>
+    </div>
+
+   <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+
+
+    <!-- Senior Electrician -->
+    <div class="team-role" data-aos="zoom-in" data-aos-delay="200">
+      <img src="kamal saini.jpg" alt="Kamal Saini">
+      <h4>Kamal Saini</h4>
+      <span class="position">Senior Electrician</span>
+      <p>Expert in high-end installations, safety compliance, and project execution.</p>
+    </div>
+
+<div class="arrow"><i class="fas fa-chevron-down"></i></div>
+
+
+    <!-- Electricians Group -->
+    <div class="team-role" data-aos="zoom-in" data-aos-delay="300">
+      <img src="3electrians.jpg" alt="Electricians Group">
+      <h4>Our Electricians</h4>
+      <span class="position"> Shaheen Hussain | Asad Abdullah Ali | Imran Ul Haq</span>
+      <p>Skilled, certified electricians delivering reliable and safe services for all environments.</p>
+    </div>
+
+  </div>
+</div>
+<style>
+    .team-section {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #071452da;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.team-hierarchy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.team-role {
+  max-width: 800px;
+  padding: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-radius: 18px;
+
+}
+
+.team-role img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+.team-role img:hover {
+  transform: scale(1.05);
+}
+
+.team-role h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin: 10px 0 5px;
+}
+
+.team-role .position {
+  display: block;
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.team-role p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.arrow {
+  font-size: 2.5rem;
+  color: #3498db;
+  animation: bounce 1.5s infinite;
+  margin: 10px 0;
+}
+
+.arrow i {
+  transition: transform 0.3s ease;
+}
+
+.arrow i:hover {
+  transform: scale(1.2) rotate(180deg);
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+    
+  .team-role img {
+    width: 150px;
+    height: 150px;
+  }
+  .values-section h2{
+    font-size: 2rem;
+  }
+  .team-section h2{
+        font-size: 2rem;
+    }
+  .team-role h4 {
+    font-size: 1.5rem;
+  }
+  .team-role .position {
+    font-size: 1rem;
+  }
+  .team-role p {
+    font-size: 0.95rem;
+  }
+}
+
+</style>
+        <section class="values-section" data-aos="zoom-in">
+  <h2>Our Core Values</h2>
+  <div class="values-grid">
+    
+    <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fas fa-hard-hat icon"></i>
+      <h3>Safety First</h3>
+      <p>We prioritize safety in every project, adhering to strict regulations and best practices.</p>
+    </div>
+    
+    <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fas fa-tools icon"></i>
+      <h3>Quality Craftsmanship</h3>
+      <p>Every job is completed with precision and attention to detail, ensuring lasting results.</p>
+    </div>
+    
+    <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fas fa-users icon"></i>
+      <h3>Customer Satisfaction</h3>
+      <p>We strive to exceed expectations with exceptional service and clear communication.</p>
+    </div>
+    
+    <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fas fa-lightbulb icon"></i>
+      <h3>Innovation</h3>
+      <p>We embrace the latest technologies to provide efficient and modern electrical solutions.</p>
+    </div>
+
+    <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fas fa-handshake icon"></i>
+      <h3>Integrity</h3>
+      <p>We uphold honesty and transparency in every aspect of our work and client relationships.</p>
+    </div>
+
+    <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fas fa-people-carry icon"></i>
+      <h3>Teamwork</h3>
+      <p>Our success is driven by collaboration, mutual respect, and shared goals across our teams.</p>
+    </div>
+
+  </div>
+</section>
+
     </section>
     <!-- Footer -->
     <footer class="footer">
@@ -649,9 +816,26 @@
             </div>
         </div>
     </footer>
-    <a href="https://wa.me/4407854938550" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp Icon" />
+     <!-- WhatsApp -->
+    <a href="https://wa.me/4407854938550" class="social-button whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
+    <!-- Facebook Button -->
+    <a href="https://www.facebook.com/profile.php?id=61577978351417" class="social-button facebook" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/mw.electricals/profilecard/?igsh=YzUybmx4aGthZHg=" class="social-button instagram" target="_blank"
+        aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- TikTok Button -->
+    <a href="https://www.tiktok.com/@m.w.electrical.se?_t=ZN-8xtDuHDf2LG&_r=1" class="social-button tiktok" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
     <button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
         <i class="fas fa-arrow-up-long"></i>
     </button>

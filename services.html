@@ -169,6 +169,7 @@
             font-weight: 600;
             color: rgb(46, 45, 45);
             border-bottom: 0.5px solid rgba(207, 207, 207, 0.87);
+            width: 245px;
             display: block;
         }
 
@@ -450,13 +451,56 @@
             box-shadow: 0 0 0 0 rgba(0, 194, 146, 0);
         }
     }
+            .social-button {
+            position: fixed;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, background 0.3s;
+            text-decoration: none;
+        }
+
+        /* Position each one slightly offset vertically */
+        .facebook {
+            top: 55%;
+            background-color: #1877f2;
+        }
+
+        .instagram {
+            top: 65%;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .tiktok {
+            top: 75%;
+            background-color: #000000;
+        }
+
+        .whatsapp {
+            top: 45%;
+            background-color: #25d366;
+        }
+
+        /* Hover effect */
+        .social-button:hover {
+            transform: scale(1.1);
+        }
+        
 </style>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <img src="logo3.png" alt="logo" class="logo">
+            <a href="index.html"><img src="logo3.png" alt="logo" class="logo"></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -695,9 +739,26 @@
             </div>
         </div>
     </footer>
-    <a href="https://wa.me/4407854938550" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp Icon" />
+   <!-- WhatsApp -->
+    <a href="https://wa.me/4407854938550" class="social-button whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
+    <!-- Facebook Button -->
+    <a href="https://www.facebook.com/profile.php?id=61577978351417" class="social-button facebook" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/mw.electricals/profilecard/?igsh=YzUybmx4aGthZHg=" class="social-button instagram" target="_blank"
+        aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- TikTok Button -->
+    <a href="https://www.tiktok.com/@m.w.electrical.se?_t=ZN-8xtDuHDf2LG&_r=1" class="social-button tiktok" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
     <button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
         <i class="fas fa-arrow-up-long"></i>
     </button>
