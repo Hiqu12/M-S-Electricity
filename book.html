@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -960,9 +961,9 @@ Additional Details: ${details}
         `.trim();
 
             // Encode message for URL
-            // const encodedMessage = encodeURIComponent(message);
-            // const phoneNumber = '447854938550'; // Business WhatsApp number (without +)
-            // const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            const encodedMessage = encodeURIComponent(message);
+            const phoneNumber = '447854938550'; // Business WhatsApp number (without +)
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
             // Open WhatsApp with pre-filled message
             window.open(whatsappUrl, '_blank');
